@@ -23,7 +23,7 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 // So the CSV file must be on the same domain as the Javascript, or the server
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
-    .loadURL('/mapbox.js/assets/data/eastcoast_cities.geojson')
+    .loadURL('eastcoast_cities.geojson')
     .addTo(map);
 
 // Especially with dynamic data, it's useful to automatically fit all markers
