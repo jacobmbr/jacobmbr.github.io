@@ -1,0 +1,11 @@
+[
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.701431961372558, 49.32470066245315]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.644978976550078, 49.54947464166765]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.666486940088229, 49.37727752646717]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.670824742617564, 49.397391015475684]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.645381927490234, 49.396786795428554]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.586487993597984, 49.44502355460965]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.676270246505737, 49.45134308298784]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.619558960199356, 49.442923840068566]}},
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": [8.711926913561777, 49.411721215812584]}}
+]

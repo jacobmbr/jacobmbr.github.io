@@ -5,6 +5,7 @@
 <title>Fit map to markers</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
@@ -15,29 +16,22 @@
 <div id='map'></div>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiamFjb2JtYnIiLCJhIjoiNzY5ZDcyNGMyNDc4NTBkNjExYmViMjI1NTk2ZGMzOTIifQ.CURedD-C6kcuSnauNZuF1g';
-var map = L.mapbox.map('map', 'mapbox.streets');
 
-// As with any other AJAX request, this technique is subject to the Same Origin Policy:
-// http://en.wikipedia.org/wiki/Same_origin_policy
-// So the CSV file must be on the same domain as the Javascript, or the server
-// delivering it should support CORS.
-var featureLayer = L.mapbox.featureLayer()
-    .loadURL('gemeinden.geojson')
-    .addTo(map);
+var map = L.mapbox.map('map', 'jacobmbr.n1f46p24')
+    .setView([49.3949, 8.8687], 10);
 
-// Especially with dynamic data, it's useful to automatically fit all markers
-// in the map bounds instead of guessing and checking center and zoom values
+$.getJSON("markers.json", function(data) {
+  var testLayer = L.mapbox.featureLayer().setGeoJSON(data).addTo(map);
 
-// Since this layer is loaded with the asynchronous method loadURL, that uses
-// AJAX in the background, we wait for all of the markers to be loaded by
-// waiting for the ready event. If you don't load your markers with an async
-// method and instead set them with setGeoJSON or similar, you don't need
-// to do this.
-featureLayer.on('ready', function() {
-    // featureLayer.getBounds() returns the corners of the furthest-out markers,
-    // and map.fitBounds() makes sure that the map contains these.
-    map.fitBounds(featureLayer.getBounds());
+  L.control.layers({
+  }, {
+      'Energieeffizienz': testLayer,
+      'Bike Lanes': L.mapbox.tileLayer('examples.bike-lanes')
+  }).addTo(map);
 });
+
+
+
 </script>
 </body>
 </html>
