@@ -47,7 +47,6 @@ Control society | Cybernetic (Computer) | Distributed Network | Protocol
 ## Physical Media
 
 
-
 ## Network Diagrams
 
 
