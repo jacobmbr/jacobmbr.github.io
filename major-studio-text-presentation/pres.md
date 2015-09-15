@@ -31,9 +31,6 @@ a management style | protocological control | not so much
 
 
 
-
-
-
 ## Key Concepts
 
 
