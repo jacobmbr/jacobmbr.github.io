@@ -217,11 +217,9 @@ Maybe rather discuss...
 
 
 ## Periodization Supplements
-- Justifying the period-machine relation
-  - "I am particularly inspired by five pages from Gilles Deleuze, 'Postscript on Control Societies,' which begin to define a chronological period after the modern age [...]. I aim to flesh out the specificity of this third historical wave by focusing on the controlling computer technologies _native to it_" (p.3)
-  - "Deleuze has much to contribute, especially by establishing a connection between control society and computers" (p.22)
-  - "Types of machines are easily matched with each type of society - not that machines are determining, but because they express those social forms capable of generating them and usign them" (Deleuze, Postscript, p.6)
-  - "In Deleuze, therefore, computers are historically concurrent with control societies". (p.22)
+- "Deleuze has much to contribute, especially by establishing a connection between control society and computers" (p.22)
+- "Types of machines are easily matched with each type of society - not that machines are determining, but because they express those social forms capable of generating them and usign them" (Deleuze, Postscript, p.6)
+- "In Deleuze, therefore, computers are historically concurrent with control societies". (p.22)
 
   So are the Beatles. Correlation v. Causation?
 
