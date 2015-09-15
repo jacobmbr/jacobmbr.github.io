@@ -18,15 +18,7 @@ a management style | protocological control | not so much
   - Definitions of Protocol
 - Chapter 1: Physical Media
   - Network Diagrams
-    - Centralized
-    - Decentralized
-    - Distributed
   - Protocol Layers
-    - Link
-    - Internet
-    - Transport
-    - Interlude: DNS
-    - Application
 - Questions
 
 
