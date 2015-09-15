@@ -82,7 +82,6 @@ Control society | Cybernetic (Computer) | Distributed Network | Protocol
 <!-- .slide: data-background="white url('interstates.png') center no-repeat" data-background-size="contain" data-background-repeat="no-repeat" -->
 
 
-
 ## Rules Inside Rules for the Network of Networks: Protocol Layers
 - The content of every new protocol is always another protocol (p. 10)
 - Division of labor: Each layer...
