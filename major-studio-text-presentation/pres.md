@@ -1,3 +1,8 @@
+## Protocol, Ch 1: Physical Media
+### Major Studio I - 9/15/15
+
+
+
 ## Contents
 
 This book is about | what it means | do I cover it?
@@ -8,13 +13,28 @@ a management style | protocological control | not so much
 
 
 ## Outline
-- Periodization
-- Definitions of Protocol
-- Network Diagrams
-  - Centralized
-  - Decentralized
-  - Distributed
+- Key Concepts
+  - Periodization
+  - Definitions of Protocol
+- Chapter 1: Physical Media
+  - Network Diagrams
+    - Centralized
+    - Decentralized
+    - Distributed
+  - Protocol Layers
+    - Link
+    - Internet
+    - Transport
+    - Interlude: DNS
+    - Application
+- Questions
 
+
+
+
+
+
+## Key Concepts
 
 
 ## Periodization
@@ -26,18 +46,13 @@ Disciplinary society | Thermodynamic | Decentralized Network | Bureaucracy
 Control society | Cybernetic (Computer) | Distributed Network | Protocol
 
 
-
-## The Diffusion of Power
-- "Before computerized information management, the heart of institutional command and control was easy to locate. In fact, the conspicuous appearance of the halls of power was used by regimes to maintain their hegemony... Even though the monuments of power still stand, visibly present in stable locations, the agency that maintains power is neither visible nor stable. Power no longer permanently resides in these monuments, and command and control now move about as desired"
-
-
-
 ## Definitions of Protocol
 - (p.6) A computer protocol is a set of recommendations and rules that outline specific technical standards. 
 
 - (p.8) Protocol is a distributed management system that allows control to exist within a heterogeneous material milieu.
 
 - (p.30) Protocol is not by nature horizontal or vertical, but [it] is an algorithm, a *proscription for structure* whose form of appearance my be any number of different diagrams or shapes.
+
 
 
 ## Physical Media
@@ -79,7 +94,7 @@ Control society | Cybernetic (Computer) | Distributed Network | Protocol
 
 
 
-## Rules Inside Rules for the Network of Networks: Transport Layers
+## Rules Inside Rules for the Network of Networks: Protocol Layers
 - The content of every new protocol is always another protocol (p. 10)
 - Division of labor: Each layer...
   - doesn't care what the one above it does
