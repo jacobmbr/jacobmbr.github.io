@@ -188,11 +188,8 @@ www | Desk of the www person
 ## Questions
 
 
-## Is The Internet Inherently Liberating or Inherently Oppresive?
-
-
-## Hint
-![Press](printing-press.gif) <!-- .element class="stretch" -->
+## Is The Internet Inherently Liberating or Inherently Oppressive?
+![Press](printing-press.gif) <!-- .element class="fragment stretch" -->
 
 
 ## Is There A Better Way of DNS Stewardship?
