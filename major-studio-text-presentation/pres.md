@@ -188,8 +188,6 @@ www | Desk of the www person
 ## Questions
 
 
-
-
 ## Is The Internet Inherently Liberating or Inherently Oppresive?
 
 
@@ -197,9 +195,7 @@ www | Desk of the www person
 ![Press](printing-press.gif) <!-- .element class="stretch" -->
 
 
-## What is a Diagram?
-- "A diagram is a map, or rather several superimposed maps." (Gilles Deleuze, Foucault, p.44) 
-- Deleuze calls the "diagram or abstract machine ... the map of relations between forces, a map of destiny, or intensity, which...acts as a non-unifying immanent cause which is coextensive with the whole social field. The abstract machine is like the cause of the concrete assemblages that execute its relations; and these relations take place 'not above' but within the very tissue of the assemblages they produce." (Deleuze, Foucault, p. 37)
+## Is There A Better Way of DNS Stewardship?
 
 
 ## Do We Live in a Control Society?
@@ -216,4 +212,7 @@ Maybe rather discuss...
 ## The Why and How of Periodization
 
 
+## What is a Diagram?
+- "A diagram is a map, or rather several superimposed maps." (Gilles Deleuze, Foucault, p.44) 
+- Deleuze calls the "diagram or abstract machine ... the map of relations between forces, a map of destiny, or intensity, which...acts as a non-unifying immanent cause which is coextensive with the whole social field. The abstract machine is like the cause of the concrete assemblages that execute its relations; and these relations take place 'not above' but within the very tissue of the assemblages they produce." (Deleuze, Foucault, p. 37)
 
