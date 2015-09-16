@@ -44,7 +44,7 @@ function draw() {
     2
   );
   //text(nf((hour() * windowHeight/12) + (minute()/60 * windowHeight/12) + (second()/60 * windowHeight/3600),0,2), 20, 20);
-  if (seconds() === 0 && minutes === 0) { playGong(); }
+  if (second() === 0 && minute() === 0) { playGong(); }
 }
 
 function keyPressed() {
