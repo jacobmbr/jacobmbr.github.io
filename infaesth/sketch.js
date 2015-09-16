@@ -16,10 +16,11 @@ function setup() {
 }
 
 function draw() {
-  stroke(240,240,240);
   //background(255);
+  noStroke();
 
   for(var i=0; i<60; i++) {
+    i % 10 === 0 ? stroke(220,220,220) : stroke(240,240,240);
     line(
       i*windowWidth/60, 
       0,
@@ -27,24 +28,32 @@ function draw() {
       windowHeight
     )
   }
-  for(var j=0; j < 12; j++) {
+  
+  stroke(240,240,240); 
+  for(var j=0; j < 24; j++) {
     line(
       0,
-      j*windowHeight/12,
+      j*windowHeight/24,
       windowWidth,
-      j*windowHeight/12
+      j*windowHeight/24
     )
   }
 
+  fill(255,0,0);
   noStroke();
   ellipse(
     (minute() * windowWidth/60) + (second()/60 * windowWidth/60),
-    (hour() * windowHeight/12) + (minute()/60 * windowHeight/12) + (second()/60 * windowHeight/3600),
+    (hour() * windowHeight/24) + (minute()/60 * windowHeight/12) + (second()/60 * windowHeight/3600),
     2,
     2
   );
-  //text(nf((hour() * windowHeight/12) + (minute()/60 * windowHeight/12) + (second()/60 * windowHeight/3600),0,2), 20, 20);
-  if (second() === 0 && minute() === 0) { playGong(); }
+
+  //text(nf((hour() * windowHeight/24) + (minute()/60 * windowHeight/12) + (second()/60 * windowHeight/3600),0,2), 20, 20);
+  if (second() === 0 && minute() === 0) {
+    playGong(); 
+    fill(255,0,0);
+    line(0, hour() * windowHeight/24, windowWidth, hour()*windowHeight/24);
+  }
 }
 
 function keyPressed() {
