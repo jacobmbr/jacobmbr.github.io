@@ -20,11 +20,10 @@
         width: auto;
       }
       @media screen and (-webkit-min-device-pixel-ratio:0) {
-          select {padding-right:39px}
+          select {padding-right:59px}
       }
       label {position:relative}
       label:after {
-        display:none;
           content:'<>';
           font-weight:light;
           font:1em "Consolas", monospace;
@@ -33,8 +32,8 @@
           -moz-transform:rotate(90deg);
           -ms-transform:rotate(90deg);
           transform:rotate(90deg);
-          right:8px; top:2px;
-          padding:38px 5px 0 0;
+          right:0px; bottom:0px;
+          padding:0 0 0 23px ;
           position:absolute;
           pointer-events:none;
       }
@@ -55,6 +54,7 @@
       }
       div {margin 0 0; padding: 0 0; display:inline}
       span, u, select, option {
+        line-height: 84px;
         vertical-align: middle;
       }
       span.counter {
@@ -64,7 +64,7 @@
       span.bad { color: red; font-size: 1.5em; text-decoration: underline;}
       span.good { color: orange;}
       span.strike { color: grey; text-decoration: line-through;}
-      h1.underline {text-decoration: underline}
+      h1.underline {text-decoration: none; color:red;}
 
     </style>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
@@ -74,8 +74,7 @@
     <div id='root'>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="vendors.js"></script>
-    <script src="app.js"></script>
+    <script src="/static/bundle.js"></script>
     <script src="https://use.typekit.net/agv1hsz.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </body>
