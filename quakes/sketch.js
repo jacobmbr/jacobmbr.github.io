@@ -29,7 +29,6 @@ function preload() {
 
 function setup() {
   removeElements();
-  console.log("setup called");
   createCanvas(windowWidth, windowHeight);
   background(0);
   noStroke();
@@ -82,7 +81,7 @@ function draw() {
   }
   timeElapsed = millis() - beginning;
 
-  if(timeElapsed < totalDuration && i < tables[timeFrameWord].times.length) {
+  if(i < tables[timeFrameWord].times.length) {
     fill(0, 20);
     rect(0,0,width,height);
     if(speedFactor*timeElapsed > tables[timeFrameWord].times[i]-tables[timeFrameWord].times[0]){
@@ -117,10 +116,11 @@ function draw() {
   }
   fill("red");
   noStroke();
-  text("one " + timeFrameWord + " in " + totalDuration/1000 + " seconds" + "  |  press any key for lines & sound", 10, windowHeight-10);
+  var d = new Date(tables[timeFrameWord].times[i]);
+  text("Showing last " + timeFrameWord + ", currently at " + d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear() + ", " + d.getHours() +":"+d.getMinutes() + "  |  press any key for lines & sound",10,windowHeight-10);
   stroke("red");
   strokeWeight(2);
-  line(0,windowHeight,map(timeElapsed,0,totalDuration,0,windowWidth),windowHeight);
+  line(0,windowHeight,map(i,0,tables[timeFrameWord].times.length,0,windowWidth),windowHeight);
 }
 
 function keyPressed() {
