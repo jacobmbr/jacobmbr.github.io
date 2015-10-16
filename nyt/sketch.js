@@ -1,4 +1,4 @@
-var res, i, ref, xm, ym, objs, v, textHeight, arr, arr_from, arr_to, arrayIndex, offset, t, brightness, padding, j;
+var res, i, ref, xm, ym, objs, v, textHeight, arr, arr_from, arr_to, arrayIndex, offset, t, brightness, padding, j, searchString; 
 
 function preload() {
   res = loadJSON("./output.json");
@@ -28,7 +28,11 @@ function setup() {
 
 function draw() {
   if (mouseIsPressed) {
-    v = (mouseY-ym)*15;
+    if (abs(mouseY-ym) < 20 && offset === 0) {
+      v = 0;
+    } else {
+      v = (mouseY-ym);
+    }
   } else {
     v = 5;
   }
@@ -97,34 +101,34 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+function getStringObject(arrInd) {
+  ["Refugee", "refugee", "REFUGEE"].forEach(function(el){
+    if(res[arrInd].title.indexOf(el) !== -1) {searchString = el}
+  });
+
+  return {
+    left:   res[arrInd].title.substr(0,res[arrInd].title.indexOf(searchString)),
+    right:  res[arrInd].title.substr(res[arrInd].title.indexOf(searchString)+7),
+    date:   res[arrInd].pub_date
+  };
+}
+
 function fillArray(arr, from, to) {
   for(var k = from; k < to + 1; k++) {
-    arr[k] = {
-      left:   res[k].title.substr(0,res[k].title.indexOf("Refugee")),
-      right:  res[k].title.substr(res[k].title.indexOf("Refugee")+7),
-      date:   res[k].pub_date
-    };
+    arr[k] = getStringObject(k);
   }
   return arr;
 }
 
 function incrementArray(arr) {
   arr.splice(0,1);
-  arr.push({
-      left:   res[arrayIndex - nOnScreen].title.substr(0,res[arrayIndex - nOnScreen].title.indexOf("Refugee")),
-      right:  res[arrayIndex - nOnScreen].title.substr(res[arrayIndex - nOnScreen].title.indexOf("Refugee")+7),
-      date:   res[arrayIndex - nOnScreen].pub_date
-  });
+  arr.push(getStringObject(arrayIndex));
   arrayIndex--;
   return arr;
 }
 function decrementArray(arr){
   arr.splice(arr.length-1,1);
-  arr.splice(0,0, {
-      left:   res[arrayIndex].title.substr(0,res[arrayIndex].title.indexOf("Refugee")),
-      right:  res[arrayIndex].title.substr(res[arrayIndex].title.indexOf("Refugee")+7),
-      date:   res[arrayIndex].pub_date
-  });
+  arr.splice(0,0, getStringObject(arrayIndex));
   arrayIndex++;
   return arr;
 }
