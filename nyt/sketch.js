@@ -31,7 +31,7 @@ function draw() {
     if (abs(mouseY-ym) < 20 && offset === 0) {
       v = 0;
     } else {
-      v = (mouseY-ym);
+      v = (mouseY-ym)*55;
     }
   } else {
     v = 5;
