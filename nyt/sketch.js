@@ -1,4 +1,4 @@
-var res, i, ref, xm, ym, objs, v, textHeight, arr, arr_from, arr_to, arrayIndex, offset, t, brightness, padding, j, searchString; 
+var res, i, ref, xm, ym, objs, v, textHeight, arr, arr_from, arr_to, arrayIndex, offset, t, brightness, padding, j, searchString, stopZone;
 
 function preload() {
   res = loadJSON("./output.json");
@@ -24,14 +24,18 @@ function setup() {
 
   t = 0;
   offset = 2;
+  stopZone = 30;
 }
 
 function draw() {
+  background(0,0,0);
   if (mouseIsPressed) {
-    if (abs(mouseY-ym) < 20 && offset === 0) {
-      v = 0;
+    if (abs(mouseY-ym) < stopZone) {
+      if( offset === 0 ) {
+        v = 0;
+      }
     } else {
-      v = (mouseY-ym)*55;
+      v = (mouseY-ym) > 0 ? (mouseY-stopZone-ym) : (mouseY+stopZone-ym);
     }
   } else {
     v = 5;
@@ -49,21 +53,15 @@ function draw() {
     arr = v > 0 ? decrementArray(arr) : incrementArray(arr);
   }
   colorMode(RGB);
-  background(0,0,0);
   textStyle(BOLD);
   ref = textWidth("Refugee");
-
-  fill(255);
-  textSize(textHeight-2);
-  text("100 Years of NYT Headlines on Refugees".split(" ").join("\n"), 10, textHeight);
-  i = parseInt(millis() / 300, 10);
 
   textStyle(ITALIC);
   textSize(textHeight);
   textAlign(CENTER);
   for(j = 0; j < arr.length; j++) {
     textStyle(ITALIC);
-    yOffset = (j*(textHeight+padding))+ (v > 0 ? offset : -offset);
+    yOffset = (j*(textHeight+padding)) + (v > 0 ? offset : -offset);
     brightness = yOffset-ym < 0 ? (yOffset) : windowHeight/2 - (yOffset - ym);
     fill(255);
     fill(map(brightness, 0, windowHeight/2, 0,255));
@@ -94,7 +92,15 @@ function draw() {
   text(arr[parseInt(nOnScreen/2,10)].date.split("-").join("\n"), xm, ym +20);
   strokeWeight(4);
   stroke(255);
+  
+  textStyle(BOLD);
+  textAlign(LEFT);
   noStroke();
+  fill(255);
+  textSize(textHeight-2);
+  text("100 Years of NYT Headlines on Refugees", 10, textHeight);
+  i = parseInt(millis() / 300, 10);
+
 }
 
 function windowResized() {
