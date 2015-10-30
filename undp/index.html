@@ -2,17 +2,19 @@
   <head>
     <style>
       body {
-        background: #000;
+        background: #001861;
+        color: #fff;
+        padding: 2em 3em;
       }
       select {
+        color: #fff;
         font-size: 1em;
         font-weight: bold;
         font-family: Helvetica, sans-serif;
-        border: 1px solid #ccc;
+        border: 1px solid #fff;
         border-radius: 5px;
-        margin-top:12px;
+        margin:12px 10px 0 0;
         padding: 5px 18px 5px 18px;
-        border: 1px solid #ccc;
         box-shadow: none;
         background: transparent;
         background-image: none;
@@ -23,21 +25,20 @@
         width: auto;
       }
       @media screen and (-webkit-min-device-pixel-ratio:0) {
-          select {padding-right:39px}
+          select {padding-right:59px}
       }
       label {position:relative}
       label:after {
-        display:none;
           content:'<>';
           font-weight:light;
           font:1em "Consolas", monospace;
-          color:#ccc;
+          color:#fff;
           -webkit-transform:rotate(90deg);
           -moz-transform:rotate(90deg);
           -ms-transform:rotate(90deg);
           transform:rotate(90deg);
-          right:8px; top:2px;
-          padding:38px 5px 0 0;
+          right:0px; bottom:0px;
+          padding:0 0 0 23px ;
           position:absolute;
           pointer-events:none;
       }
@@ -65,10 +66,28 @@
         transition: all 1.5s ease;
       }
 
-      span.bad { color: red; font-size: 1.5em; text-decoration: underline;}
-      span.good { color: orange;}
+      span.bad { color: #FF4819; font-size: 1.5em; text-decoration: underline;}
+      span.good { color: #68B209;}
       span.strike { color: grey; text-decoration: line-through;}
-      h1.underline {text-decoration: underline}
+      h1.underline {text-decoration: none; color:red;}
+
+
+      .phrase-enter {
+        opacity: 0.01;
+      }
+
+      .phrase-enter.phrase-enter-active {
+        opacity: 1;
+        transition: opacity .5s ease-in;
+      }
+      .phrase-leave {
+        opacity: 1;
+      }
+
+      .phrase-leave.phrase-leave-active {
+        opacity: 0.01;
+        transition: opacity .5s ease-in;
+      }
 
     </style>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
@@ -78,8 +97,7 @@
     <div id='root'>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="vendors.js"></script>
-    <script src="app.js"></script>
+    <script src="/static/bundle.js"></script>
     <script src="https://use.typekit.net/agv1hsz.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </body>
