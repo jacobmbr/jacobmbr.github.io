@@ -1,10 +1,38 @@
 <html>
   <head>
     <style>
+      @media (min-width: 1000px) {
+        div#buttons {
+          display: none;
+        }
+      }
+      @media (max-width: 1000px) {
+        div#buttons {
+          display: block;
+        }
+      }
+
       body {
         background: #001861;
         color: #fff;
-        padding: 2em 3em;
+        margin: 0 0;
+      }
+      div#buttons {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      div#buttons a {
+        width: 50%;
+        color: white;
+        text-decoration: none;
+        background: rgba(0,24,97,0.8);
+        border-top: 1px #ccc solid;
+        float: left;
+        font-size: 2em;
+        padding: 10px 0;
       }
       select {
         color: #fff;
@@ -57,8 +85,9 @@
       h1 {
         font-size:3em;
       }
-      div {margin 0 0; padding: 0 0; display:inline}
-      span, u, select, option {
+      div {margin 0 0; padding: 0 0;}
+      span, u, select, option, .counterDiv {
+        display: inline;
         line-height: 84px;
         vertical-align: middle;
       }
