@@ -11,11 +11,33 @@
           display: block;
         }
       }
-
+      #container {
+        position:relative;
+        height: 100%;
+        width: 100%;
+        padding: 0 0;
+        overflow: hidden;
+      }
+      #container2 {
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        margin: 0 0;
+        transition: all 0.1s linear;
+      }
+      .bgNormal {
+        background: #001861;
+      }
+      #container2.bgAbout {
+        background: #001861;
+        top: 0;
+      }
       body {
         background: #001861;
         color: #fff;
         margin: 0 0;
+        transition: all 0.5s ease-in-out;
       }
       div#buttons {
         position: fixed;
@@ -51,6 +73,8 @@
         appearance:none;
         cursor:pointer;
         width: auto;
+        line-height: 84px;
+        vertical-align: middle;
       }
       @media screen and (-webkit-min-device-pixel-ratio:0) {
           select {padding-right:59px}
@@ -83,21 +107,21 @@
         font-weight: bold;
       }
       h1 {
-        font-size:3em;
+        transition: all 0.3s ease-in-out;
       }
       div {margin 0 0; padding: 0 0;}
-      span, u, select, option, .counterDiv {
+      select {}
+      span, u, option, .counterDiv {
         display: inline;
-        line-height: 84px;
-        vertical-align: middle;
+        vertical-align: bottom;
       }
       span.counter {
-        transition: all 1.5s ease;
+        transition: all 0.3s ease;
       }
 
       span.bad { color: #FF4819; font-size: 1.5em; text-decoration: underline;}
       span.good { color: #68B209;}
-      span.strike { color: grey; text-decoration: line-through;}
+      span.strike { color: #5B6B9D; text-decoration: line-through; transition: all 0.5s ease;}
       h1.underline {text-decoration: none; color:red;}
 
 
