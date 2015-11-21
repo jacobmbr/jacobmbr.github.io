@@ -1,5 +1,7 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <style>
       @media (min-width: 1000px) {
         div#buttons {
@@ -11,12 +13,26 @@
           display: block;
         }
       }
+      @media only screen and (min-device-width : 300px) and (max-device-width : 667px) {
+        label:after {display:none}
+      }
+      p {
+        font-family: "europa",sans-serif;
+      }
       #container {
         position:relative;
         height: 100%;
         width: 100%;
         padding: 0 0;
         overflow: hidden;
+      }
+      #container1 {
+        top: 0;
+        position: absolute;
+        transition: top 0.1s linear;
+      }
+      #container1.container1pushdown {
+        top: 100%;
       }
       #container2 {
         position:absolute;
@@ -47,13 +63,17 @@
         text-align: center;
       }
       div#buttons a {
-        width: 50%;
+        width: 33%;
         color: white;
         text-decoration: none;
-        background: rgba(0,24,97,0.8);
+        background: rgba(0,24,97,0.9);
         border-top: 1px #ccc solid;
         float: left;
+        font-size: 1em;
         padding: 10px 0;
+      }
+      div#buttons:hover {
+        opacity: 1;
       }
       select {
         color: #fff;
@@ -72,7 +92,6 @@
         appearance:none;
         cursor:pointer;
         width: auto;
-        line-height: 84px;
         vertical-align: middle;
       }
       @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -88,8 +107,8 @@
           -moz-transform:rotate(90deg);
           -ms-transform:rotate(90deg);
           transform:rotate(90deg);
-          right:0px; bottom:0px;
-          padding:0 0 0 23px ;
+          right:10px; bottom:0px;
+          padding:0 0 0 20px ;
           position:absolute;
           pointer-events:none;
       }
@@ -106,8 +125,10 @@
         font-weight: bold;
       }
       h1 {
+        margin: 0 0 0 0;
         transition: all 0.3s ease-in-out;
       }
+      h1 div {display: inline;}
       div {margin 0 0; padding: 0 0;}
       select {}
       span, u, option, .counterDiv {
