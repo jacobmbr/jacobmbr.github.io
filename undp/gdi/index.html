@@ -25,7 +25,7 @@
       }
       span.counter {
         display: block;
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
       }
       div#gdi {
         font-family: "museo-slab";
@@ -34,15 +34,22 @@
         clear: both;
         background: rgba(255,255,255,0.1);
         margin: 0 1%;
-        padding: 10px 0;
+        padding: 5px 0;
       }
       div#male_container, div#female_container {
         font-family: "museo-slab";
-        font-size: 15px;
+        font-size: 12px;
         text-align: center;
         width: 48%;
         float: left;
         margin: 0 1%;
+      }
+      div#legend {
+        text-align: center;
+        font-family: "museo-slab";
+        width: 15%;
+        margin: 0 1%;
+        float: left;
       }
       div.top {
         border-bottom: 3px solid white;
@@ -63,6 +70,8 @@
       }
       .hide { display:none; }
       .show { display: block; }
+      .hideOp {opacity: 0; visibility: hidden;}
+      .showOp {opacity: 1; visibility: visible;}
       span.t50 {
         width: 50%;
       }
@@ -76,7 +85,7 @@
       body {
         background: #001861;
         color: #fff;
-        margin: 0 20px;
+        margin: 0 0;
       }
       select {
         color: #fff;
@@ -138,11 +147,11 @@
         vertical-align: middle;
       }
       span.counter {
-        transition: all 1.5s ease;
+        transition: all 0.5s ease;
       }
 
-      span.bad { color: #FF4819; font-size: 1.5em; text-decoration: underline;}
-      span.good { color: #68B209;}
+      span.bad { color: Red; font-size: 1.5em; text-decoration: underline;}
+      span.good { color: LimeGreen;}
       span.strike { color: grey; text-decoration: line-through;}
       h1.underline {text-decoration: none; color:red;}
 
@@ -166,6 +175,7 @@
 
     </style>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://raw.githubusercontent.com/HubSpot/odometer/master/themes/odometer-theme-minimal.css' rel='stylesheet' type='text/css'>
     <title>Sketch</title>
   </head>
   <body>
