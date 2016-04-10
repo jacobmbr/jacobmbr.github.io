@@ -30,7 +30,7 @@
       var maxRows = space.size.y / fontSize;
       space.add({
         animate: function(time, fps, context) {
-          if(1) c = c < window.voternames.length - maxRows -1 ? c + 1 : 0;
+          if(time % 1000 < 300) c = c < window.voternames.length - maxRows -1 ? c + 1 : 0;
           for(var i = 0; i<maxRows;i++) {
             v = window.voternames[c+i];
             form.fill( "#eee" ).font( fontSize, "monospace");
@@ -38,6 +38,8 @@
           }
           form.fill("black").rect( new Pair(space.size.x/2 - 230,space.size.y/2 - 50,space.size.x/2 +230,space.size.y/2 + 20) ).stroke(false);
           form.fill("white").font(30, "monospace").text( new Point(space.size.x/2, space.size.y/2), "This is what they know",1000,-200);
+        },
+        onSpaceResize(x,y) {
         }
       });
       space.bindMouse();
