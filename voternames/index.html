@@ -47,7 +47,7 @@ o["GENERAL-11/18/2008"] +
 o["GENERAL-12/11/2007"];
       }
       var c = 0;
-      var fontSize = 18;
+      var fontSize = 17;
       var maxRows = space.size.y / fontSize;
       space.add({
         animate: function(time, fps, context) {
@@ -60,8 +60,8 @@ o["GENERAL-12/11/2007"];
           form.fill("rgba(0,0,0,0.9)").rect( new Pair(0,space.size.y/2 - fontSize,space.size.x,space.size.y/2 + (5*fontSize)) ).stroke(false);
           form.fill("white").font(fontSize, "monospace").text( new Point(0, space.size.y/2 + (2*fontSize) +5), "P NAME       FIRSTNAME        DATE_BIRTH    RESIDENTIAL_ADDRESS       ZIP   CITY            VOTING_HISTORY",2000, 20);
 
-          form.fill("rgba(0,0,0,0.9)").rect( new Pair(space.size.x/2 - 230,space.size.y/2 - 80,space.size.x/2 +230,space.size.y/2 - 20) ).stroke(false);
-          form.fill("white").font(30, "monospace").text( new Point(space.size.x/2, space.size.y/2 - 40), "This is what they know",1000,-200);
+          //form.fill("rgba(0,0,0,0.9)").rect( new Pair(space.size.x/2 - 240,space.size.y/2 - 200,space.size.x/2 +230,space.size.y/2 - 110) ).stroke(false);
+          //form.fill("white").font(30, "monospace").text( new Point(space.size.x/2, space.size.y/2 - 150), "This is what they know",1000,-200);
         },
         onSpaceResize(x,y) {
         }
