@@ -1,0 +1,3 @@
+[submodule "voter-surveillance"]
+	path = voter-surveillance
+	url = https://github.com/jacobmbr/voter-surveillance.git
